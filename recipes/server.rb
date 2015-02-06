@@ -17,7 +17,6 @@
 # limitations under the License.
 #
 
-
 include_recipe 'nodejs' if node['npm_lazy']['server']['install_nodejs']
 
 directory node['npm_lazy']['server']['config']['cacheDirectory']  do
@@ -29,4 +28,12 @@ nodejs_npm 'npm_lazy'
 
 template '/etc/npm_lazy-config.js' do
   source 'npm_lazy-config.js.erb'
+end
+
+cookbook_file 'etc/init/npm_lazy.conf'
+
+service 'npm_lazy' do
+  supports :status => true, :restart => true
+  action [:enable, :start]
+  provider Chef::Provider::Service::Upstart
 end
