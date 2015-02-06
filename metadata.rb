@@ -6,4 +6,4 @@ description      'Installs and configures the npm_lazy application for caching N
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '1.0.0'
 
-depends 'nodejs'
+depends 'nodejs', '>= 2.0'
