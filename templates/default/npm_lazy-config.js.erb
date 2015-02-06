@@ -10,7 +10,7 @@ module.exports = {
     logToFile: true,
 
     // This should be a file path.
-    filename: '<%= node['npm_lazy']['server']['config']['logPath'] %>'
+    filename: '<%= node['npm_lazy']['server']['config']['logPath'] %>',
   },
 
   // Cache config
@@ -52,7 +52,7 @@ module.exports = {
   remoteUrl: '<%= node['npm_lazy']['server']['config']['remoteUrl']  %>',
   // bind port and host
   port: <%= node['npm_lazy']['server']['config']['port']  %>,
-  host: '<%= node['npm_lazy']['server']['config']['host']  %>'
+  host: '<%= node['npm_lazy']['server']['config']['host']  %>',
   
   // Proxy config
   // You can also configure this using the http_proxy and https_proxy environment variables
