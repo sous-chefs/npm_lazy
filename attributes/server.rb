@@ -24,6 +24,6 @@ default['npm_lazy']['server']['config']['httpTimeout'] = 5000
 default['npm_lazy']['server']['config']['maxRetries'] = 5
 default['npm_lazy']['server']['config']['rejectUnauthorized'] = 'true'
 default['npm_lazy']['server']['config']['externalUrl'] = 'http://localhost:8080'
-default['npm_lazy']['server']['config']['remoteUrl'] = 'http://localhost:8080'
+default['npm_lazy']['server']['config']['remoteUrl'] = 'https://registry.npmjs.org/'
 default['npm_lazy']['server']['config']['port'] = '8080'
 default['npm_lazy']['server']['config']['host'] = 'localhost'
