@@ -16,4 +16,5 @@
 # limitations under the License.
 #
 
+default['npm_lazy']['client']['install_nodejs'] = false
 default['npm_lazy']['client']['registry_uri'] = 'http://localhost:8080'

@@ -17,6 +17,8 @@
 # limitations under the License.
 #
 
+include_recipe 'nodejs' if node['npm_lazy']['client']['install_nodejs']
+
 # set the npm registry if it's not already set
 execute 'set npm registry' do
   command "npm config set registry #{node['npm_lazy']['client']['registry_uri']}"
