@@ -26,15 +26,15 @@ end
 
 nodejs_npm 'npm_lazy'
 
-template '/etc/npm_lazy-config.js' do
-  source 'npm_lazy-config.js.erb'
-  notifies :restart, 'service[npm_lazy]', :immediately
-end
-
 cookbook_file 'etc/init/npm_lazy.conf'
 
 service 'npm_lazy' do
   supports :status => true, :restart => true
   action [:enable, :start]
   provider Chef::Provider::Service::Upstart
+end
+
+template '/etc/npm_lazy-config.js' do
+  source 'npm_lazy-config.js.erb'
+  notifies :restart, 'service[npm_lazy]', :immediately
 end
