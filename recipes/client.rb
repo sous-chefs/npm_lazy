@@ -19,6 +19,10 @@
 
 include_recipe 'nodejs' if node['npm_lazy']['client']['install_nodejs']
 
+####
+#### Note at the moment this only sets the npm registry for the root user
+####
+
 # set the npm registry if it's not already set
 execute 'set npm registry' do
   command "npm config set registry #{node['npm_lazy']['client']['registry_uri']}"
