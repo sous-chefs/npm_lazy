@@ -8,5 +8,5 @@ version          '1.0.2'
 
 depends 'nodejs', '>= 2.0'
 
-source_url 'https://github.com/tas50/npm_lazy' if respond_to?(:source_url)
-issues_url 'https://github.com/tas50/npm_lazy/issues' if respond_to?(:issues_url)
+source_url 'https://github.com/tas50/chef-npm_lazy' if respond_to?(:source_url)
+issues_url 'https://github.com/tas50/chef-npm_lazy/issues' if respond_to?(:issues_url)
