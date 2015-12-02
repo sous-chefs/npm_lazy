@@ -6,6 +6,10 @@ description      'Installs and configures the npm_lazy application for caching N
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '1.0.2'
 
+%w(ubuntu debian).each do |os|
+  supports os
+end
+
 depends 'nodejs', '>= 2.0'
 
 source_url 'https://github.com/tas50/chef-npm_lazy' if respond_to?(:source_url)
