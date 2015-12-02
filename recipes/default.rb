@@ -2,7 +2,7 @@
 # Cookbook Name:: npm_lazy
 # Recipe:: default
 #
-# Copyright (c) 2015, Tim Smith
+# Copyright 2015, Tim Smith - tsmith84@gmail.com
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.

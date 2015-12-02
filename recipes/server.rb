@@ -2,7 +2,7 @@
 # Cookbook Name:: npm_lazy
 # Recipe:: server
 #
-# Copyright (c) 2015, Tim Smith
+# Copyright 2015, Tim Smith - tsmith84@gmail.com
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@
 
 include_recipe 'nodejs' if node['npm_lazy']['server']['install_nodejs']
 
-directory node['npm_lazy']['server']['config']['cacheDirectory']  do
+directory node['npm_lazy']['server']['config']['cacheDirectory'] do
   action :create
   recursive true
 end
