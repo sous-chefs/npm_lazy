@@ -1,11 +1,8 @@
-npm_lazy
-========
-
+# npm_lazy
 Installs and configures the npm_lazy daemon to cache npm registry calls.
 
-License & Authors
------------------
-- Author:: Tim Smith <tsmith84@gmail.com>
+## License & Authors
+- Author:: Tim Smith [tsmith84@gmail.com](mailto:tsmith84@gmail.com)
 
 ```text
 Licensed under the Apache License, Version 2.0 (the "License");
