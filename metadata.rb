@@ -10,7 +10,7 @@ version '1.0.3'
   supports os
 end
 
-depends 'nodejs', '>= 2.0'
+depends 'nodejs', '>= 3.0'
 
 source_url 'https://github.com/sous-chefs/npm_lazy' if respond_to?(:source_url)
 issues_url 'https://github.com/sous-chefs/npm_lazy/issues' if respond_to?(:issues_url)
