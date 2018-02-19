@@ -3,10 +3,14 @@ driver:
 
 provisioner:
   name: chef_zero
+  product_name: chef
+  product_version: <%= ENV['CHEF_VERSION'] || 'latest' %>
+  install_strategy: once
+  deprecations_as_errors: true
 
 platforms:
-  - name: ubuntu-12.04
   - name: ubuntu-14.04
+  - name: ubuntu-16.04
 
 suites:
   - name: server
