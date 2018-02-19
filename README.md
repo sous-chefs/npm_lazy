@@ -1,20 +1,25 @@
 # npm_lazy
-[![Build Status](https://travis-ci.org/tas50/chef-npm_lazy.svg?branch=master)](https://travis-ci.org/tas50/chef-npm_lazy) [![Cookbook Version](https://img.shields.io/cookbook/v/npm_lazy.svg)](https://supermarket.chef.io/cookbooks/npm_lazy)
+
+[![Build Status](https://travis-ci.org/sous-chefs/npm_lazy.svg?branch=master)](https://travis-ci.org/sous-chefs/npm_lazy) [![Cookbook Version](https://img.shields.io/cookbook/v/npm_lazy.svg)](https://supermarket.chef.io/cookbooks/npm_lazy)
 
 Installs and configures the npm_lazy daemon to cache npm registry calls.
 
 ## Requirements
+
 ### Platforms
+
 - Debian/Ubuntu
 
 ### Chef
-- Chef 11+
+
+- Chef 12+
 
 ### Cookbooks
+
 - nodejs
 
-
 ## License & Authors
+
 - Author:: Tim Smith [tsmith84@gmail.com](mailto:tsmith84@gmail.com)
 
 ```text
