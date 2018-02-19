@@ -26,14 +26,35 @@ end
 
 nodejs_npm 'npm_lazy'
 
-cookbook_file 'etc/init/npm_lazy.conf'
+template '/etc/npm_lazy-config.js' do
+  source 'npm_lazy-config.js.erb'
+  notifies :restart, 'service[npm_lazy]'
+end
+
+if node['init_package'] == 'systemd'
+  systemd_unit 'npm_lazy.service' do
+    content(Unit: {
+              Description: 'NPM Lazy - A lazy local cache for NPM to make your local deploys faster',
+              Documentation: 'https://github.com/mixu/npm_lazy',
+              After: 'network.target',
+            },
+            Service: {
+              Type: 'simple',
+              Environment: 'HOME=/root',
+              ExecStart: '/usr/bin/npm_lazy -c /etc/npm_lazy-config.js',
+              Restart: 'on-failure',
+            },
+            Install: {
+              WantedBy: 'multi-user.target',
+            })
+    action :create
+    notifies :restart, 'service[npm_lazy]', :immediately
+  end
+else # upstart
+  cookbook_file 'etc/init/npm_lazy.conf'
+end
 
 service 'npm_lazy' do
   supports status: true, restart: true
   action [:enable, :start]
-end
-
-template '/etc/npm_lazy-config.js' do
-  source 'npm_lazy-config.js.erb'
-  notifies :restart, 'service[npm_lazy]', :immediately
 end
