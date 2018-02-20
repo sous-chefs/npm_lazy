@@ -1,7 +1,18 @@
 # npm_lazy Cookbook CHANGELOG
 This file is used to list changes made in each version of the npm_lazy cookbook.
 
+## v2.0.0 (2019-02-19)
+
+- This cookbook has been transferred to the Sous Chefs. For more information or to become involved in maintaining this cookbook see http://sous-chefs.org/
+- Updated to support systemd based Debian distros (Ubuntu 16.04/Debian 8/Debian 9)
+- Added InSpec integration tests
+- Removed test dependency installation via Gemfile and converted testing to use Delivery local mode via ChefDK
+- Added kitchen-dokken based integration testing in Travis CI
+- Depend on nodejs cookbook 3.0 or later
+- Require Chef 12.11 or later due to the use of the systemd_unit Chef resource
+
 ## v1.0.3
+
 - Update requirements in the readme
 - Add travis CI testing with Kitchen-docker
 - Add requirements to the readme and include travis / supermarket badges
