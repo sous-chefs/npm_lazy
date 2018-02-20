@@ -8,11 +8,12 @@ Installs and configures the npm_lazy daemon to cache npm registry calls.
 
 ### Platforms
 
-- Debian/Ubuntu
+- Debian 8+
+- Ubuntu 14.04+
 
 ### Chef
 
-- Chef 12+
+- Chef 12.11+
 
 ### Cookbooks
 

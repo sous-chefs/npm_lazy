@@ -19,8 +19,12 @@ services: docker
 
 env:
   matrix:
+  - INSTANCE=client-debian-8
+  - INSTANCE=client-debian-9
   - INSTANCE=client-ubuntu-1404
   - INSTANCE=client-ubuntu-1604
+  - INSTANCE=server-debian-8
+  - INSTANCE=server-debian-9
   - INSTANCE=server-ubuntu-1404
   - INSTANCE=server-ubuntu-1604
 
