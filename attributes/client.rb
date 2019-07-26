@@ -1,7 +1,7 @@
-# Cookbook Name:: npm_lazy
+# Cookbook:: npm_lazy
 # Attributes:: client
 #
-# Copyright 2015-2018, Tim Smith - tsmith84@gmail.com
+# Copyright:: 2015-2018, Tim Smith - tsmith84@gmail.com
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
