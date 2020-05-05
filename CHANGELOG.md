@@ -2,7 +2,7 @@
 
 This file is used to list changes made in each version of the npm_lazy cookbook.
 
-## Unreleased
+## 2.0.1 (2020-05-05)
 
 - Migrate to actions
 
