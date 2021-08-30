@@ -10,7 +10,8 @@ provisioner:
   name: dokken
   product_name: chef
   product_version: <%= ENV['CHEF_VERSION'] || 'latest' %>
-  deprecations_as_errors: true
+  # TODO: nodejs cookbook needs to fix unified_mode
+  # deprecations_as_errors: true
 
 platforms:
   - name: debian-8
