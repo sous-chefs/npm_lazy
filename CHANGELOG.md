@@ -4,6 +4,8 @@ This file is used to list changes made in each version of the npm_lazy cookbook.
 
 ## Unreleased
 
+## 2.0.5 - *2023-02-14*
+
 ## 2.0.4 - *2022-02-08*
 
 - Remove delivery folder
