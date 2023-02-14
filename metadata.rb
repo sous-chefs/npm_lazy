@@ -3,7 +3,7 @@ maintainer 'Sous Chefs'
 maintainer_email 'help@sous-chefs.org'
 license 'Apache-2.0'
 description 'Installs and configures the npm_lazy application for caching NPM registry calls'
-version '2.0.5'
+version '2.0.6'
 
 supports 'ubuntu'
 supports 'debian'
