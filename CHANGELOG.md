@@ -4,6 +4,9 @@ This file is used to list changes made in each version of the npm_lazy cookbook.
 
 ## Unreleased
 
+- resolved cookstyle error: recipes/server.rb:34:4 refactor: `Chef/Modernize/UseChefLanguageSystemdHelper`
+- Require Chef 16
+
 ## 2.0.6 - *2023-02-14*
 
 ## 2.0.5 - *2023-02-14*

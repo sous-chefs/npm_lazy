@@ -31,7 +31,7 @@ template '/etc/npm_lazy-config.js' do
   notifies :restart, 'service[npm_lazy]'
 end
 
-if node['init_package'] == 'systemd'
+if systemd?
   systemd_unit 'npm_lazy.service' do
     content(Unit: {
               Description: 'NPM Lazy - A lazy local cache for NPM to make your local deploys faster',
