@@ -12,4 +12,3 @@ supports 'ubuntu'
 supports 'debian'
 
 depends 'nodejs', '>= 3.0'
-
