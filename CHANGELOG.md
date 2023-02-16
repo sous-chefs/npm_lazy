@@ -4,6 +4,7 @@ This file is used to list changes made in each version of the npm_lazy cookbook.
 
 ## Unreleased
 
+- resolved cookstyle error: metadata.rb:15:1 convention: `Layout/TrailingEmptyLines`
 ## 3.0.0 - *2023-02-15*
 
 - resolved cookstyle error: recipes/server.rb:34:4 refactor: `Chef/Modernize/UseChefLanguageSystemdHelper`
