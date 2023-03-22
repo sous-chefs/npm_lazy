@@ -2,6 +2,8 @@
 
 This file is used to list changes made in each version of the npm_lazy cookbook.
 
+## Unreleased
+
 ## 3.0.1 - *2023-03-22*
 
 - Update overcommit
