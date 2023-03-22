@@ -4,6 +4,10 @@ This file is used to list changes made in each version of the npm_lazy cookbook.
 
 ## Unreleased
 
+- Update overcommit
+- Update CI config
+- Update lint-unit workflow to 2.0.1
+
 ## 3.0.0 - *2023-02-15*
 
 - resolved cookstyle error: recipes/server.rb:34:4 refactor: `Chef/Modernize/UseChefLanguageSystemdHelper`
