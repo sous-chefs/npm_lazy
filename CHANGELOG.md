@@ -2,6 +2,13 @@
 
 This file is used to list changes made in each version of the npm_lazy cookbook.
 
+## [3.0.2](https://github.com/sous-chefs/npm_lazy/compare/3.0.1...v3.0.2) (2025-10-15)
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#71](https://github.com/sous-chefs/npm_lazy/issues/71)) ([8da4c44](https://github.com/sous-chefs/npm_lazy/commit/8da4c441d2cda1b4ada283b31a13c2407ffc0518))
+
 ## 3.0.1 - *2023-03-22*
 
 * Update overcommit
