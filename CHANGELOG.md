@@ -2,6 +2,22 @@
 
 This file is used to list changes made in each version of the npm_lazy cookbook.
 
+## [4.0.0](https://github.com/sous-chefs/npm_lazy/compare/v3.0.2...v4.0.0) (2026-05-19)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate npm_lazy to custom resources ([#79](https://github.com/sous-chefs/npm_lazy/issues/79))
+
+### Features
+
+* migrate npm_lazy to custom resources ([#79](https://github.com/sous-chefs/npm_lazy/issues/79)) ([21feb9c](https://github.com/sous-chefs/npm_lazy/commit/21feb9cb619a7114c815538a9f0ca0ad4b7b11ff))
+
+
+### Bug Fixes
+
+* **ci:** Update workflows to use release pipeline ([#71](https://github.com/sous-chefs/npm_lazy/issues/71)) ([8da4c44](https://github.com/sous-chefs/npm_lazy/commit/8da4c441d2cda1b4ada283b31a13c2407ffc0518))
+
 ## [3.0.2](https://github.com/sous-chefs/npm_lazy/compare/3.0.1...v3.0.2) (2025-10-15)
 
 
