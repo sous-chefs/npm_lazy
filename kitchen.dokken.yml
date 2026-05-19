@@ -1,70 +1,31 @@
 driver:
   name: dokken
-  privileged: true # because Docker and SystemD/Upstart
-  env: [CHEF_LICENSE=accept]
+  privileged: true
+  chef_version: <%= ENV['CHEF_VERSION'] || 'current' %>
 
 transport:
   name: dokken
 
 provisioner:
   name: dokken
-  product_name: chef
-  product_version: <%= ENV['CHEF_VERSION'] || 'latest' %>
-  # TODO: nodejs cookbook needs to fix unified_mode
-  # deprecations_as_errors: true
 
 platforms:
-  - name: debian-8
+  - name: debian-12
     driver:
-      image: dokken/debian-8
+      image: dokken/debian-12
       pid_one_command: /bin/systemd
-      intermediate_instructions:
-        - RUN /usr/bin/apt-get update
 
-  - name: debian-9
+  - name: debian-13
     driver:
-      image: dokken/debian-9
+      image: dokken/debian-13
+      pid_one_command: /lib/systemd/systemd
+
+  - name: ubuntu-22.04
+    driver:
+      image: dokken/ubuntu-22.04
       pid_one_command: /bin/systemd
-      intermediate_instructions:
-        - RUN /usr/bin/apt-get update
 
-  - name: centos-6
+  - name: ubuntu-24.04
     driver:
-      image: dokken/centos-6
-      platform: rhel
-      pid_one_command: /sbin/init
-
-  - name: centos-7
-    driver:
-      image: dokken/centos-7
-      platform: rhel
-      pid_one_command: /usr/lib/systemd/systemd
-
-  - name: fedora-26
-    driver:
-      image: dokken/fedora-26
-      pid_one_command: /usr/lib/systemd/systemd
-
-  - name: fedora-27
-    driver:
-      image: dokken/fedora-27
-      pid_one_command: /usr/lib/systemd/systemd
-
-  - name: ubuntu-14.04
-    driver:
-      image: dokken/ubuntu-14.04
-      pid_one_command: /sbin/init
-      intermediate_instructions:
-        - RUN /usr/bin/apt-get update
-
-  - name: ubuntu-16.04
-    driver:
-      image: dokken/ubuntu-16.04
-      pid_one_command: /bin/systemd
-      intermediate_instructions:
-        - RUN /usr/bin/apt-get update
-
-  - name: opensuse-leap
-    driver:
-      image: dokken/opensuse-leap
+      image: dokken/ubuntu-24.04
       pid_one_command: /bin/systemd

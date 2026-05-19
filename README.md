@@ -8,6 +8,16 @@
 
 Installs and configures the npm_lazy daemon to cache npm registry calls.
 
+## Resources
+
+* [npm_lazy_server](documentation/npm_lazy_server.md)
+* [npm_lazy_client](documentation/npm_lazy_client.md)
+
+## Migration
+
+This cookbook uses custom resources. See [migration.md](migration.md) for the breaking
+change from recipes and node attributes to resource properties.
+
 ## Maintainers
 
 This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of Chef cookbook maintainers working together to maintain important cookbooks. If you’d like to know more please visit [sous-chefs.org](https://sous-chefs.org/) or come chat with us on the Chef Community Slack in [#sous-chefs](https://chefcommunity.slack.com/messages/C2V7B88SF).
@@ -16,16 +26,12 @@ This cookbook is maintained by the Sous Chefs. The Sous Chefs are a community of
 
 ### Platforms
 
-- Debian 8+
-- Ubuntu 14.04+
+* Debian 12+
+* Ubuntu 22.04+
 
 ### Chef
 
-- Chef 12.11+
-
-### Cookbooks
-
-- nodejs
+* Chef Infra Client 16+
 
 ## Contributors
 

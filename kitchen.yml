@@ -2,31 +2,34 @@ driver:
   name: vagrant
 
 provisioner:
-  name: chef_zero
+  name: chef_infra
   product_name: chef
   product_version: <%= ENV['CHEF_VERSION'] || 'latest' %>
-  install_strategy: once
-  # TODO: nodejs cookbook needs to fix unified_mode
-  # deprecations_as_errors: true
+  channel: stable
+  chef_license: accept
+  deprecations_as_errors: true
+  enforce_idempotency: true
+  multiple_converge: 2
 
 verifier:
   name: inspec
 
 platforms:
-  - name: ubuntu-14.04
-  - name: ubuntu-16.04
-  - name: debian-8
-  - name: debian-9
+  - name: debian-12
+  - name: debian-13
+  - name: ubuntu-22.04
+  - name: ubuntu-24.04
+
+x-run_lists:
+  default: &default_run_list
+    - recipe[test::default]
+
+x-verifiers:
+  default: &default_verifier
+    inspec_tests:
+      - path: test/integration/default
 
 suites:
-  - name: server
-    run_list:
-      - recipe[npm_lazy::server]
-
-  - name: client
-    run_list:
-      - recipe[npm_lazy::client]
-    attributes:
-      npm_lazy:
-        client:
-          install_nodejs: true
+  - name: default
+    run_list: *default_run_list
+    verifier: *default_verifier
