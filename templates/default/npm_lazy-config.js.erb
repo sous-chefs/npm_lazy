@@ -10,7 +10,7 @@ module.exports = {
     logToFile: true,
 
     // This should be a file path.
-    filename: '<%= node['npm_lazy']['server']['config']['logPath'] %>',
+    filename: '<%= @config[:log_path] %>',
   },
 
   // Cache config
@@ -19,7 +19,7 @@ module.exports = {
   //
   // Note: Since any relative path is resolved relative to the current working
   // directory when the server is started, you should use a full path.
-  cacheDirectory: '<%= node['npm_lazy']['server']['config']['cacheDirectory'] %>',
+  cacheDirectory: '<%= @config[:cache_directory] %>',
 
   // `cacheAge`: maximum age before an index is refreshed from remoteUrl
   // - negative value means no refresh (e.g. once cached, never update the package.json metadata)
@@ -32,27 +32,27 @@ module.exports = {
   // package metadata version so caching package metadata will interfere with it.
 
   // Recommended setting: 0
-  cacheAge: <%= node['npm_lazy']['server']['config']['cacheAge']  %>,
+  cacheAge: <%= @config[:cache_age] %>,
 
   // Request config
 
   // max milliseconds to wait for each HTTP response
-  httpTimeout: <%= node['npm_lazy']['server']['config']['httpTimeout']  %>,
+  httpTimeout: <%= @config[:http_timeout] %>,
   // maximum number of retries per HTTP resource to httpTimeout
-  maxRetries: <%= node['npm_lazy']['server']['config']['maxRetries']  %>,
+  maxRetries: <%= @config[:max_retries] %>,
   // whether or not HTTPS requests are checked against Node's list of CAs
   // set false if you are using your own npm mirror with a self-signed SSL cert
-  rejectUnauthorized: <%= node['npm_lazy']['server']['config']['rejectUnauthorized']  %>,
+  rejectUnauthorized: <%= @config[:reject_unauthorized] %>,
 
   // Remote and local URL
 
   // external url to npm_lazy, no trailing /
-  externalUrl: '<%= node['npm_lazy']['server']['config']['externalUrl']  %>',
+  externalUrl: '<%= @config[:external_url] %>',
   // registry url with trailing /
-  remoteUrl: '<%= node['npm_lazy']['server']['config']['remoteUrl']  %>',
+  remoteUrl: '<%= @config[:remote_url] %>',
   // bind port and host
-  port: <%= node['npm_lazy']['server']['config']['port']  %>,
-  host: '<%= node['npm_lazy']['server']['config']['host']  %>',
+  port: <%= @config[:port] %>,
+  host: '<%= @config[:host] %>',
 
   // Proxy config
   // You can also configure this using the http_proxy and https_proxy environment variables
